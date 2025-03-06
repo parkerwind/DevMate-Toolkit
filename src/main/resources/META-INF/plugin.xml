@@ -1,0 +1,41 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.hope.ToolsPlugin</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>DevMate Toolkit</name>
+    <!-- 版本 -->
+    <version>1.0.1</version>
+    <!-- Plugin description. -->
+    <idea-version since-build="203.6682.115" until-build="213.*"/>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="parkerwindc@gmail.com" url="https://github.com/parkerwind/ToolsPlugin/tree/main/IconPlugin">DM</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+
+    <description><![CDATA[
+       这是一个针对于DM项目的工具插件，用于帮助快捷性处理日常开发工作。如有建议和问题可及时联系！
+       This is a tool plug-in for DM projects to help fast-track daily development work. If you have any suggestions or questions, please contact us in time!
+    ]]></description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- 注册一个工具窗口 -->
+        <toolWindow id="Tool" anchor="right" factoryClass="com.hope.iconplugin.window.MultiToolHubWindowFactory"
+                    icon="/icons/tool-lunch.png" secondary="false">
+        </toolWindow>
+    </extensions>
+
+    <actions>
+    </actions>
+</idea-plugin>
